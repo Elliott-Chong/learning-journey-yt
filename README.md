@@ -1,4 +1,4 @@
-Welcome to the AI Course Generator project! In this comprehensive full-stack tutorial, we will explore the latest features of NextJS 13.4 and build an entire project from scratch, deploying it seamlessly to Vercel 🚀.
+Welcome to the AI Course Generator project! In this comprehensive full-stack tutorial, we will explore the latest features of NextJS 13.4 and build an entire project from scratch, deploying it seamlessly to DigitalOcean 🚀.
 
 ![youtube thumbail](https://imgur.com/53XKpvr.png)
 
