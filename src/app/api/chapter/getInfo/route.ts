@@ -1,4 +1,4 @@
-// /api/chapter/getInto
+// /api/chapter/getInfo
 
 import { prisma } from "@/lib/db";
 import { strict_output } from "@/lib/gpt";
@@ -86,6 +86,7 @@ export async function POST(req: Request, res: Response) {
         { status: 400 }
       );
     } else {
+      console.error("Backend Error:", error);
       return NextResponse.json(
         {
           success: false,

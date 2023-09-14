@@ -16,14 +16,14 @@ type Props = {
 const CourseSideBar = async ({ course, currentChapterId }: Props) => {
   return (
     <div className="w-[400px] absolute top-1/2 -translate-y-1/2 p-6 rounded-r-3xl bg-secondary">
-      <h1 className="text-4xl font-bold">{course.name}</h1>
+      <h1 className="text-4xl text-black">{course.name}</h1>
       {course.units.map((unit, unitIndex) => {
         return (
           <div key={unit.id} className="mt-4">
             <h2 className="text-sm uppercase text-secondary-foreground/60">
               Unit {unitIndex + 1}
             </h2>
-            <h2 className="text-2xl font-bold">{unit.name}</h2>
+            <h2 className="text-2xl text-black ">{unit.name}</h2>
             {unit.chapters.map((chapter, chapterIndex) => {
               return (
                 <div key={chapter.id}>

@@ -73,18 +73,16 @@ const ConfirmChapters = ({ course }: Props) => {
           </Link>
           {totalChaptersCount === completedChapters.size ? (
             <Link
-              className={buttonVariants({
-                className: "ml-4 font-semibold",
-              })}
+              className={ "bg-[#ffa242] hover:bg-[#ffa242]" }
               href={`/course/${course.id}/0/0`}
             >
-              Save & Continue
+              <div className="" >Save & Continue</div>
               <ChevronRight className="w-4 h-4 ml-2" />
             </Link>
           ) : (
             <Button
               type="button"
-              className="ml-4 font-semibold"
+              className="ml-4 font-semibold bg-[#ffa242] hover:bg-[#ffa242]  "
               disabled={loading}
               onClick={() => {
                 setLoading(true);
