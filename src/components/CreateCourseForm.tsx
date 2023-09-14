@@ -67,7 +67,6 @@ const CreateCourseForm = ({ isPro }: Props) => {
       },
     });
   }
-
   form.watch();
 
   return (
@@ -80,7 +79,7 @@ const CreateCourseForm = ({ isPro }: Props) => {
             render={({ field }) => {
               return (
                 <FormItem className="flex flex-col items-start w-full sm:items-center sm:flex-row">
-                  <FormLabel className="flex-[1] text-xl">Title</FormLabel>
+                  <FormLabel className="flex-[1] text-xl">Chapter</FormLabel>
                   <FormControl className="flex-[6]">
                     <Input
                       placeholder="Enter the main topic of the course"
@@ -162,10 +161,10 @@ const CreateCourseForm = ({ isPro }: Props) => {
           <Button
             disabled={isLoading}
             type="submit"
-            className="w-full mt-6"
+            className="w-full mt-6 bg-[#ffa242] hover:bg-[#ffa242] "
             size="lg"
           >
-            Lets Go!
+            Generate Chapter and Units
           </Button>
         </form>
       </Form>

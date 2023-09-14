@@ -37,7 +37,7 @@ const ChapterCard = React.forwardRef<ChapterCardHandler, Props>(
         newSet.add(chapter.id);
         return newSet;
       });
-    }, [chapter.id, setCompletedChapters]);
+    }, [completedChapters, chapter.id, setCompletedChapters]);
 
     React.useEffect(() => {
       if (chapter.videoId) {

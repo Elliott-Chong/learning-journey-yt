@@ -15,7 +15,7 @@ export async function POST(req: Request, res: Response) {
     if (!session?.user) {
       return new NextResponse("unauthorised", { status: 401 });
     }
-    const isPro = await checkSubscription();
+    const isPro = true;
     if (session.user.credits <= 0 && !isPro) {
       return new NextResponse("no credits", { status: 402 });
     }
@@ -41,7 +41,7 @@ export async function POST(req: Request, res: Response) {
           "an array of chapters, each chapter should have a youtube_search_query and a chapter_title key in the JSON object",
       }
     );
-
+    
     const imageSearchTerm = await strict_output(
       "you are an AI capable of finding the most relevant image for a course",
       `Please provide a good image search term for the title of a course about ${title}. This search term will be fed into the unsplash API, so make sure it is a good search term that will return good results`,

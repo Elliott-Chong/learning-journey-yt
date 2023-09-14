@@ -33,7 +33,7 @@ const QuizCards = ({ chapter }: Props) => {
   }, [answers, questionState, chapter.questions]);
   return (
     <div className="flex-[1] mt-16 ml-8">
-      <h1 className="text-2xl font-bold">Concept Check</h1>
+      <h1 className="text-2xl text-black">Concept Check</h1>
       <div className="mt-2">
         {chapter.questions.map((question) => {
           const options = JSON.parse(question.options) as string[];
@@ -77,7 +77,7 @@ const QuizCards = ({ chapter }: Props) => {
           );
         })}
       </div>
-      <Button className="w-full mt-2" size="lg" onClick={checkAnswer}>
+      <Button className="w-full mt-2 bg-[#ffa242] hover:bg-[#ffa242]" size="lg" onClick={checkAnswer}>
         Check Answer
         <ChevronRight className="w-4 h-4 ml-1" />
       </Button>
